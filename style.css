@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    height: 800px;
+}
+aside {
+    background-image: url("/signupform/images/halie-west-25xggax4bSA-unsplash.jpg");
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+aside > img {
+    width: 50px;
+    height: 50px;
+
+}
