@@ -1,5 +1,10 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+@font-face {
+    font-family: norse;
+    src: url('/signupform/fonts/Norse-Bold.otf');
 }
 body {
     display: flex;
@@ -16,19 +21,21 @@ aside {
     padding-top: 15%;
 }
 aside > div > img {
-    width: 30%;
-    height: 85%;
+    width: 6em;
+    height: 8em;
 }
 aside > div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 23%;
-    background-color: transparent;
+    height: 20%;
+    background-color: rgba(15, 14, 14, 0.438);
 }
 aside > div > p {
-    font-size: 2.5em
+    font-size: 5em;
+    font-family: norse;
+    color: white;
 }
 section {
     display: flex;
@@ -46,8 +53,8 @@ h5{
 }
 .header p{
     margin-left: 5%;
-    margin-right:20%;
-    font-size: 1.2em;
+    margin-right:16%;
+    font-size: 1.3em;
     font-weight: bold;
 }
 .footer, .header {
@@ -65,6 +72,8 @@ h5{
 }
 .main > h5 {
     margin-top:3%;
+    font-weight:600;
+    font-size: 1.3em;
 }
 .form{
     display: flex;
@@ -77,11 +86,17 @@ h5{
 form div {
     display:flex;
     flex-direction: column;
+    width: 50%;
     gap: 10px;
 }
 input{
     width: 80%;
     border-radius: 5px;
+    border-color: #E5E7EB;
+}
+input:focus{
+    border-color: rgb(84, 84, 255);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
 }
 label{
     margin-bottom:-3%;
@@ -93,7 +108,7 @@ label{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding:30px;
+    padding:2em;
     overflow:hidden;
     padding-left:5%;
 }
@@ -105,8 +120,8 @@ a {
     color: #596D48;
 }
 button{
-    width:230px;
-    height:50px;
+    width:16.43em;
+    height:3.6em;
     border-radius: 10px;
     font-size:1.3em;
     background-color: #596D48;
@@ -114,10 +129,41 @@ button{
 }
 .pwcheck{
     color: red;
-    margin-top:-3%;
-    font-size: 0.8em;
-    display:none;
+    margin-top:-2%;
+    font-size: 0.7em;
+    visibility: hidden;
 }
 .wrongpw{
     border-color: red;
+}
+.hidden{
+    display:none
+}
+
+@media (min-width:300px) and (max-width: 1200px) {
+    body {
+        flex-direction: column;
+        height:100%;
+        overflow:visible;
+        font-size: 8px;
+        width: 100%;
+    }
+    aside {
+        width:100%;
+        height:10%;
+        justify-content: center;
+        align-items: center;
+    }
+    aside > div {
+        height: 10%;
+    }
+    .form{
+        width: 100%;
+        height: 50%;
+        flex-direction: row;
+    }
+    form div{
+        width: 50%;
+        gap:10px;
+    }
 }
