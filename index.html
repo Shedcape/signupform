@@ -23,23 +23,38 @@
         </section>
         <section class="main">
             <h5>Let's do this!</h5>
-            <form id="signup"action="@" method="post" class="form">
+            <form id="signup" action="@" method="post" onsubmit="formValidation()" class="form">
                 <div>
-                    <label for="firstname">FIRST NAME</label>
-                    <input type="text" name="firstname" id="firstname">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" class="password" name="password" id="password">
-                    <p class="pwcheck">* Passwords do not match and/or <span class="criteria">doesn't fulfill the criterias</span></p>
+                    <div>
+                        <label class="firstname" for="firstname">FIRST NAME<span class="required">*</span></label>
+                        <input type="text" name="firstname" id="firstname" required>
+                    </div>
+                    <div>
+                        <label class="surname" for="surname">LAST NAME<span class="required">*</span></label>
+                        <input type="text" name="surname" id="surname" required>    
+                    </div>
                 </div>
                 <div>
-                    <label for="surname">LAST NAME</label>
-                    <input type="text" name="surname" id="surname">
-                    <label for="phonenumber">PHONE NUMBER</label>
-                    <input type="text" name="phonenumber" id="phonenumber">
-                    <label for="confpassword">CONFIRM PASSWORD</label>
-                    <input type="password" class="password"name="confpassword" id="confpassword">
+                    <div>
+                        <label class="email" for="email">EMAIL<span class="required">*</span></label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label class="phonenumber" for="phonenumber">PHONE NUMBER<span class="required">*</span></label>
+                        <input type="text" name="phonenumber" id="phonenumber" required>    
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="password">PASSWORD<span class="required">*</span></label>
+                        <input type="password" class="password" name="password" id="password" required>
+                        <p class="pwcheck">* Passwords do not match and/or doesn't fulfill the criterias.
+                        The passwords needs to be at least six characters long, contain one uppercase, one lowercase and one number</p>    
+                    </div>
+                    <div>
+                        <label class="confpassword" for="confpassword">CONFIRM PASSWORD<span class="required">*</span></label>
+                        <input type="password" class="password"name="confpassword" id="confpassword" required>    
+                    </div>
                 </div>
             </form>
         </section>
